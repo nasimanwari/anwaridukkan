@@ -4,4 +4,6 @@
     "react-router-dom": "^6.3.0"
   },
   "devDependencies": {
-    "no
+    "nodemon": "^2.0.16"
+  }
+}
