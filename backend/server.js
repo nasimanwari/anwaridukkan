@@ -3,6 +3,7 @@ import data from './data.js';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import userRouter from './routes/userRoutes.js';
+import orderRouter from './routes/orderRoutes.js';
 
 dotenv.config();
 
@@ -40,7 +41,7 @@ app.get('/api/products/:id', (req, res) => {
   }
 });
 app.use('/api/users', userRouter);
-
+app.use('/api/orders', orderRouter);
 app.use((err, req, res, next) => {
   res.status(500).send({ message: err.message });
 });
