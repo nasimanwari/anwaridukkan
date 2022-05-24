@@ -44,9 +44,9 @@ export default function SigninScreen() {
   return (
     <Container className="small-container">
       <Helmet>
-        <title>Sign In</title>
+        <title>Giriş</title>
       </Helmet>
-      <h1 className="my-3">Sign In</h1>
+      <h1 className="my-3">Giriş</h1>
 
       <Form onSubmit={submitHandler}>
         <Form.Group className="mb-3" controlId="email">
@@ -59,7 +59,7 @@ export default function SigninScreen() {
           />
         </Form.Group>
         <Form.Group className="mb-3" controlId="password">
-          <Form.Label>Password</Form.Label>
+          <Form.Label>Şifre</Form.Label>
           
           <Form.Control
             type="password"
@@ -68,11 +68,11 @@ export default function SigninScreen() {
           />
         </Form.Group>
         <div className="mb-3">
-          <Button type="submit">Sign In</Button>
+          <Button type="submit">Giriş</Button>
         </div>
         <div className="mb-3">
-          New customer?{' '}
-          <Link to={`/signup?redirect=${redirect}`}>Create your account</Link>
+          Hesabın Yok Mu?{' '}
+          <Link to={`/signup?redirect=${redirect}`}>Hesap Aç</Link>
         </div>
       </Form>
     </Container>

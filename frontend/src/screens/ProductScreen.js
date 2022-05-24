@@ -92,9 +92,9 @@ function ProductScreen() {
                 numReviews={product.numReviews}
               ></Rating>
             </ListGroup.Item>
-            <ListGroup.Item>Pirce : ${product.price}</ListGroup.Item>
+            <ListGroup.Item>Fiyat : {product.price} TL</ListGroup.Item>
             <ListGroup.Item>
-              Description:
+              Özellikleri:
               <p>{product.description}</p>
             </ListGroup.Item>
           </ListGroup>
@@ -105,18 +105,18 @@ function ProductScreen() {
               <ListGroup variant="flush">
                 <ListGroup.Item>
                   <Row>
-                    <Col>Price:</Col>
-                    <Col>${product.price}</Col>
+                    <Col>Fiyat:</Col>
+                    <Col>{product.price} TL</Col>
                   </Row>
                 </ListGroup.Item>
                 <ListGroup.Item>
                   <Row>
-                    <Col>Status:</Col>
+                    <Col>Durum:</Col>
                     <Col>
                       {product.countInStock > 0 ? (
-                        <Badge bg="success">In Stock</Badge>
+                        <Badge bg="success">MEVCUT</Badge>
                       ) : (
-                        <Badge bg="danger">Unavailable</Badge>
+                        <Badge bg="danger">TÜKENDİ</Badge>
                       )}
                     </Col>
                   </Row>
@@ -125,7 +125,7 @@ function ProductScreen() {
                   <ListGroup.Item>
                     <div className="d-grid">
                       <Button onClick={addToCartHandler} variant="primary">
-                        Add to Cart
+                        SEPETE EKLE
                       </Button>
                     </div>
                   </ListGroup.Item>
